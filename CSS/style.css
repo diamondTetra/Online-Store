@@ -143,3 +143,7 @@
         font-size: 23px;
     }
 }
+/*product page*/
+input[type="search"] {
+    font-family: FontAwesome;
+}
