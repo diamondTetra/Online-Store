@@ -65,7 +65,7 @@
 }
 .banner{
     height: 100vh;
-    background: linear-gradient(to right bottom,black,rgb(216, 72, 72), white) no-repeat;
+    background: linear-gradient(to right bottom,#B85042,#E7E8D1, #A7BEAE) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
