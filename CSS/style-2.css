@@ -1,0 +1,9 @@
+/*product page*/
+input[type="search"] {
+    font-family: FontAwesome;
+}
+.search-bar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
