@@ -66,7 +66,7 @@
 }
 .banner{
     height: 100vh;
-    background: linear-gradient(to right bottom, #89ABE3, rgb(172, 210, 237)) no-repeat;
+    background: linear-gradient(to right bottom, #89ABE3, rgb(172, 210, 237));
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -240,3 +240,106 @@
     }
 }
 /* ========================= /Home page Content */
+
+/* ========================== Services */
+
+/* Product */
+
+/* Promotion */
+.text{
+    padding:40px;
+    background:#eee;
+}
+
+.text h3{
+    text-align: center;
+    /* text-transform: uppercase; */
+    font-size: 30px;
+    padding:10px;
+}
+
+.promo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo-container .promo{
+    background:linear-gradient(-55deg, #C5FAD5 29%, #89ABE3 29.1%, #89ABE3 68%, #C5FAD5 68.1%);
+    border-radius: 5px;
+    margin:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 5px 10px #0005;
+    overflow: hidden;
+}
+
+.promo-container .promo .product{
+    flex:1 1 250px;
+    padding:15px;
+    text-align: center;
+}
+
+.promo-container .promo .product img{
+    width:80%;
+}
+
+.promo-container .promo .content{
+    flex:1 1 250px;
+    text-align: center;
+    padding:10px;
+    /* text-transform: uppercase; */
+}
+
+.promo-container .promo .content span{
+    color:#eee;
+    font-size: 25px;
+}
+
+.promo-container .promo .content h3{
+    color:#fff;
+    font-size: 40px;
+}
+
+.promo-container .promo .content p{
+    color:#eee;
+    font-size: 20px;
+    padding:10px 0;
+}
+
+.promo-container .promo .content .btn{
+    display: block;
+    height:40px;
+    width:150px;
+    line-height: 40px;
+    background: #fff;
+    color:black;
+    margin:5px auto;
+    text-decoration: none;
+}
+
+.promo-container .promo .product-2{
+    position: relative;
+    bottom: -33px;
+    padding:10px;
+    flex:1 1 250px;
+}
+
+.promo-container .promo .product-2 img{
+    width:100%;
+}
+
+@media (max-width:768px){
+    .promo-container .promo .product-2{
+        display: none;
+    }
+}
+
+/* ======================================= Shop */
+.shop-banner {
+    height: 50vh;
+    background: linear-gradient(to right bottom, #89ace34b, rgba(172, 210, 237, 0.296)), url(/img/shop/shop-banner.png);
+    background-attachment: fixed;
+}
