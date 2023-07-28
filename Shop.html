@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="product-page">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,8 +21,9 @@
                 <li><a href="Shop.html">Shop</a></li>
                 <li><a href="Contact.html">Contact</a></li>
                 <li><a href="">login</a></li>
-                <li><a href="Cart.html">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <li><a href="#">
+                    <i class="fa fa-shopping-cart shopping" aria-hidden="true"></i>
+                        <span class="quantity"></span>
                 </a></li>
             </ul>
             <div class="icon menu-btn">
@@ -32,10 +33,217 @@
     </nav> 
     <section class="banner shop-banner">
         <div class="content">
-            
+            <div class="wrapper filter">
+                <div id="search-container">
+                    <input
+                    type="search"
+                    id="search-input"
+                    placeholder="Search product name here.."
+                    />
+                    <button id="search">Search</button>
+                </div>
+                <div id="buttons">
+                    <button class="button-value" onclick="filterProduct('all')">All</button>
+                    <button class="button-value" onclick="filterProduct('ToiletPapers')">
+                        ToiletPapers
+                    </button>
+                    <button class="button-value" onclick="filterProduct('CleaningProducts')">
+                        CleaningProducts
+                    </button>
+                    <button class="button-value" onclick="filterProduct('Broom')">
+                        Broom
+                    </button>
+                    <button class="button-value" onclick="filterProduct('Toilet')">
+                        Toilet
+                    </button>
+                </div>
+                <div id="products"></div>
+            </div>
+         
         </div>
-    </section> 
+    </section>
+    <section id="shopContainer">
+        <div class="shop-container">
 
+            <h3 class="title"> Our Products </h3>
+         
+            <div class="products-container">
+         
+                <div class="product card ToiletPapers hide" data-name="p-1">
+                    <img src="img/shop/products/2.png" alt="">
+                    <h3 class="product-name">Toilet Papers</h3>
+                    <div class="price">R48.00</div>
+                </div>
+            
+                <div class="product card CleaningProducts hide" data-name="p-2">
+                    <img src="img/shop/products/3.png" alt="">
+                    <h3 class="product-name">Cleaning Material</h3>
+                    <div class="price">R50.00</div>
+                </div>
+            
+                <div class="product card CleaningProducts Broom hide" data-name="p-3">
+                    <img src="img/shop/products/4.png" alt="">
+                    <h3 class="product-name">Broom</h3>
+                    <div class="price">R15.00</div>
+                </div>
+            
+                <div class="product card CleaningProducts hide" data-name="p-4">
+                    <img src="img/shop/products/1.png" alt="">
+                    <h3 class="product-name">Towels</h3>
+                    <div class="price">R10.00</div>
+                </div>
+            
+                <div class="product card ToiletPapers hide" data-name="p-5">
+                    <img src="img/shop/products/2.png" alt="">
+                    <h3 class="product-name">Toilet Papers</h3>
+                    <div class="price">R80.00</div>
+                </div>
+            
+                <div class="product card CleaningProducts Toilet hide" data-name="p-6">
+                    <img src="img/shop/products/6.png" alt="">
+                    <h3 class="product-name">Toilet Cleaning</h3>
+                    <div class="price">R10.00</div>
+                </div>      
+            </div>
+        </div>
+         
+        <div class="products-preview">
+            <div class="preview" data-target="p-1">
+                <i class="fas fa-times"></i>
+                <img src="img/shop/products/2.png" alt="">
+                <h3>Toilet Papers</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>24 Double Length Rolls</p>
+                <div class="price">R48.00</div>
+                <div class="buttons">
+                    <a href="Cart.html" class="buy">buy now</a>
+                    <a href="#" class="cart" onclick="addTocardCart(0)">add to cart</a>
+                </div>
+            </div>
+         
+            <div class="preview" data-target="p-2">
+                <i class="fas fa-times"></i>
+                <img src="img/shop/products/3.png" alt="">
+                <h3>Cleaning Material</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>Get Toilet Papers and Cleaning Spray</p>
+                <div class="price">R50.00</div>
+                <div class="buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart" onclick="addTocardCart(1)">add to cart</a>
+                </div>
+            </div>
+         
+            <div class="preview" data-target="p-3">
+                <i class="fas fa-times"></i>
+                <img src="img/shop/products/4.png" alt="">
+                <h3>Broom</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>Modern plastic broom</p>
+                <div class="price">R15.00</div>
+                <div class="buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart" onclick="addTocardCart(2)">add to cart</a>
+                </div>
+            </div>
+         
+            <div class="preview" data-target="p-4">
+                <i class="fas fa-times"></i>
+                <img src="img/shop/products/1.png" alt="">
+                <h3>Towels</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>Get 4 Towels</p>
+                <div class="price">R10.00</div>
+                <div class="buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart" onclick="addTocardCart(3)">add to cart</a>
+                </div>
+            </div>
+         
+            <div class="preview" data-target="p-5">
+                <i class="fas fa-times"></i>
+                <img src="img/shop/products/2.png" alt="">
+                <h3>Toilet Papers</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>48 Double Length Rolls</p>
+                <div class="price">$2.00</div>
+                <div class="buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart" onclick="addTocardCart(4)">add to cart</a>
+                </div>
+            </div>
+         
+            <div class="preview" data-target="p-6">
+                <i class="fas fa-times"></i>
+                <img src="img/shop/products/6.png" alt="">
+                <h3>Toilet Cleaning</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>Quality Rubber Plunger 150mm</p>
+                <div class="price">R10.00</div>
+                <div class="buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart" onclick="addTocardCart(5)">add to cart</a>
+                </div>
+            </div>
+         
+        </div>
+    </section>
+    <div class="container">
+        <header>
+            <h1>Your Shopping Cart</h1>
+        </header>
+    </div>
+    <div class="cardCart">
+        <h1></h1>
+        <ul class="listcardCart">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
     <script src="JS/script.js"></script>
 </body>
 </html>
